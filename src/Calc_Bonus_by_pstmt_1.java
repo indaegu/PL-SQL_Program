@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.Objects;
+import java.util.Properties;
 
 /**
  * @author SCM
@@ -26,7 +27,7 @@ public class Calc_Bonus_by_pstmt_1 {
 
         int fetchSize = 10000; // 커밋의 fetchSize를 조절 10, 100, 1000, 10000
         int count = 1; // 실행 횟수를 담을 변수
-        int FETCH_SIZE = 1000; // 가져올 데이터의 fetchSize를 조절 10, 100, 1000, 10000
+        int FETCH_SIZE = 10000; // 가져올 데이터의 fetchSize를 조절 10, 100, 1000, 10000
 
         try {
             System.out.println();
@@ -107,10 +108,17 @@ public class Calc_Bonus_by_pstmt_1 {
             System.out.println("Calc_Bonus_by_pstmt_1 검증 완료");
             System.out.println();
 
+            // 메일 보내기
+            String mailContent = "걸린 시간 : ".concat(String.valueOf(endTime - startTime) + "ms");
+            SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
+                    "Calc_Bonus_by_pstmt_1 실행완료", mailContent);
+
         }catch (Exception e) {
             conn.rollback();
             e.printStackTrace(); // 에러 발생시 에러 메시지 출력
             System.out.println("Calc_Bonus_by_pstmt_1 실행중 에러 발생 : " + e.getMessage());
+            SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
+                    "Calc_Bonus_by_pstmt_1 에러 발생", e.getMessage());
         }finally {
             Objects.requireNonNull(stmt).close(); // 사용한 객체 반환
             Objects.requireNonNull(rs).close(); // 사용한 객체 반환

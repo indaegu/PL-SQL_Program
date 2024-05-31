@@ -2,6 +2,7 @@ import java.sql.Connection;
 import java.util.Objects;
 import java.util.Scanner;
 
+
 /**
  * @author SCM
  * @설명: 쉽게 테스트 해보기 위한 main 클래스
@@ -10,8 +11,10 @@ import java.util.Scanner;
  * @see
  */
 public class Main {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+
         // 한번 Connection을 맺어 여러 테스트에 재사용함으로서 각기 다른 Connection 시간으로 인해 생기는 오차를 방지
         try (Connection conn = DBConnector.getConnectionLocal()) { // try - with - resource 문으로 Connection 자동
             // close
@@ -66,7 +69,7 @@ public class Main {
                         8. Calc_Bonus_by_Callstmt_1 : PL/SQL로 1개씩 Fetch 하는 프로그램
                         9. Calc_Bonus_by_Callstmt_2 : PL/SQL로 1000개씩 Fetch 하는 프로그램
                         10. Calc_Bonus_by_Callstmt_3 : 한방 쿼리
-                        11. 모두 돌리기
+                        11. 모아서 돌리기
                         q. 프로그램 종료
                         메뉴를 선택하세요:\s """
         );

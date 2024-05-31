@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.Objects;
+import java.util.Properties;
 
 /**
  * @author SCM
@@ -110,10 +111,18 @@ public class Calc_Bonus_by_pstmt_2 {
             System.out.println("Calc_Bonus_by_pstmt_2 검증 완료");
             System.out.println();
 
+            // 메일 보내기
+            String mailContent = "걸린 시간 : ".concat(String.valueOf(endTime - startTime) + "ms");
+            SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
+                    "Calc_Bonus_by_pstmt_2 실행완료", mailContent);
+
+
         }catch (Exception e) {
             conn.rollback();
             e.printStackTrace(); // 에러 발생시 에러 메시지 출력
             System.out.println("Calc_Bonus_by_pstmt_2 실행중 에러 발생 : " + e.getMessage());
+            SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
+                    "Calc_Bonus_by_pstmt_2 에러 발생", e.getMessage());
         }finally {
             Objects.requireNonNull(stmt).close(); // 사용한 객체 반환
             Objects.requireNonNull(rs).close(); // 사용한 객체 반환

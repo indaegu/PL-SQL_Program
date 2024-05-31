@@ -1,5 +1,6 @@
 import java.sql.*;
 import java.util.Objects;
+import java.util.Properties;
 
 /**
  * @author SCM
@@ -24,8 +25,6 @@ public class Calc_Bonus_by_Callstmt_3 {
             stmt.execute(sql); // 쿼리 실행
 
             long startTime = System.currentTimeMillis(); // 시작 시간 측정
-
-            //
             System.out.println("한방 쿼리 수행중...");
             sql =   "BEGIN " +
                     "INSERT INTO bonus_coupon (yyyymm, customer_id, email, coupon, credit_point, send_dt)\n" +
@@ -86,10 +85,18 @@ public class Calc_Bonus_by_Callstmt_3 {
             System.out.println("Calc_Bonus_by_Callstmt_3 검증 완료");
             System.out.println();
 
+            String mailContent = "걸린 시간 : ".concat(String.valueOf(endTime - startTime) + "ms");
+
+            // 메일 보내기
+            SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
+                    "Calc_Bonus_by_Callstmt_3 실행완료", mailContent);
+
         }catch (Exception e) {
             conn.rollback();
-            e.printStackTrace(); // 에러 발생시 에러 메시지 출력
             System.out.println("Calc_Bonus_by_Callstmt_3 실행중 에러 발생 : " + e.getMessage());
+            SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
+                    "Calc_Bonus_by_Callstmt_3 에러 발생", e.getMessage());
+
         }finally {
             Objects.requireNonNull(stmt).close(); // 사용한 객체 반환
             Objects.requireNonNull(rs).close(); // 사용한 객체 반환
