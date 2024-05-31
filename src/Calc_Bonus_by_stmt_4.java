@@ -38,7 +38,7 @@ public class Calc_Bonus_by_stmt_4 {
 
             long startTime = System.currentTimeMillis(); // 시작 시간 측정
 
-            sql = "SELECT * FROM customer where enroll_dt >= to_date('2013-01-01'," +
+            sql = "SELECT * FROM customer where enroll_dt >= to_date('2018-01-01'," +
                     "'YYYY-MM-DD')"; // 320만건 데이터 가져오기
             stmt = conn.createStatement(); // 쿼리 생성
             stmt.executeQuery(sql);// 쿼리 실행
@@ -109,6 +109,7 @@ public class Calc_Bonus_by_stmt_4 {
             System.out.println("Calc_Bonus_by_stmt_4 실행중 에러 발생 : " + e.getMessage());
             SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
                     "Calc_Bonus_by_stmt_4 에러 발생", e.getMessage());
+            LogWriter.writeLog("Calc_Bonus_by_stmt_4 에러 발생", e.getMessage());
 
         }finally {
             Objects.requireNonNull(stmt).close(); // 사용한 객체 반환

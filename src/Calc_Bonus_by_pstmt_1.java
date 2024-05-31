@@ -27,7 +27,7 @@ public class Calc_Bonus_by_pstmt_1 {
 
         int fetchSize = 10000; // 커밋의 fetchSize를 조절 10, 100, 1000, 10000
         int count = 1; // 실행 횟수를 담을 변수
-        int FETCH_SIZE = 10000; // 가져올 데이터의 fetchSize를 조절 10, 100, 1000, 10000
+        int FETCH_SIZE = 1000; // 가져올 데이터의 fetchSize를 조절 10, 100, 1000, 10000
 
         try {
             System.out.println();
@@ -41,7 +41,7 @@ public class Calc_Bonus_by_pstmt_1 {
 
             long startTime = System.currentTimeMillis(); // 시작 시간 측정
 
-            sql = "SELECT * FROM customer where enroll_dt >= to_date('2013-01-01'," +
+            sql = "SELECT * FROM customer where enroll_dt >= to_date('2018-01-01'," +
                     "'YYYY-MM-DD')"; // 320만건 데이터 가져오기
             stmt = conn.createStatement(); // 쿼리 생성
             stmt.executeQuery(sql);// 쿼리 실행
@@ -119,6 +119,8 @@ public class Calc_Bonus_by_pstmt_1 {
             System.out.println("Calc_Bonus_by_pstmt_1 실행중 에러 발생 : " + e.getMessage());
             SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
                     "Calc_Bonus_by_pstmt_1 에러 발생", e.getMessage());
+            LogWriter.writeLog("Calc_Bonus_by_pstmt_1 에러 발생", e.getMessage());
+
         }finally {
             Objects.requireNonNull(stmt).close(); // 사용한 객체 반환
             Objects.requireNonNull(rs).close(); // 사용한 객체 반환

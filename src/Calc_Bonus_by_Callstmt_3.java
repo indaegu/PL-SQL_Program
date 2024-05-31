@@ -1,4 +1,8 @@
+import java.io.IOException;
+import java.io.Writer;
 import java.sql.*;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Objects;
 import java.util.Properties;
 
@@ -10,7 +14,7 @@ import java.util.Properties;
  * @see
  */
 public class Calc_Bonus_by_Callstmt_3 {
-    public static void execute(Connection conn) throws SQLException {
+    public static void execute(Connection conn) throws SQLException, IOException {
         String sql = null; // SQL 쿼리를 담을 문자열 선언
         ResultSet rs = null; // 결과 집합을 담을 ResultSet 선언
         Statement stmt = null; // sql 선언을 담을 Statement 선언
@@ -18,7 +22,6 @@ public class Calc_Bonus_by_Callstmt_3 {
         try {
             System.out.println();
             System.out.println("========Calc_Bonus_by_Callstmt_3 시작========");
-
             System.out.println("기존 BONUS_COUPON 데이터 삭제중...");
             sql = "TRUNCATE TABLE BONUS_COUPON"; // 보너스 테이블 데이터 삭제
             stmt = conn.createStatement(); // 쿼리 생성
@@ -48,7 +51,7 @@ public class Calc_Bonus_by_Callstmt_3 {
                     "FROM\n" +
                     "  customer c\n" +
                     "WHERE\n" +
-                    "  c.enroll_dt >= TO_DATE('2013/01/01', 'YYYY/MM/DD');\n" +
+                    "  c.enroll_dt >= TO_DATE('2018/01/01', 'YYYY/MM/DD');\n" +
                     "COMMIT;\n" +
                     "END;";
 
@@ -96,7 +99,7 @@ public class Calc_Bonus_by_Callstmt_3 {
             System.out.println("Calc_Bonus_by_Callstmt_3 실행중 에러 발생 : " + e.getMessage());
             SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
                     "Calc_Bonus_by_Callstmt_3 에러 발생", e.getMessage());
-
+            LogWriter.writeLog("Calc_Bonus_by_Callstmt_3 에러 발생", e.getMessage());
         }finally {
             Objects.requireNonNull(stmt).close(); // 사용한 객체 반환
             Objects.requireNonNull(rs).close(); // 사용한 객체 반환

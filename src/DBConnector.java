@@ -27,6 +27,7 @@ public class DBConnector {
             return DriverManager.getConnection(url, user, password); // 로컬 연결 객체 반환
         } catch (SQLException e) {
             System.out.println("KOPO_DA2 데이터베이스 연결 오류 : " + e.getMessage());
+            LogWriter.writeLog("KOPO_DA2 데이터베이스 연결 오류", e.getMessage());
             return null;
         }
     }
@@ -47,6 +48,7 @@ public class DBConnector {
             return DriverManager.getConnection(url, user, password); // 로컬 연결 객체 반환
         } catch (SQLException e) {
             System.out.println("Local 데이터베이스 연결 오류 : " + e.getMessage());
+            LogWriter.writeLog("Local 데이터베이스 연결 오류", e.getMessage());
             return null;
         }
     }
@@ -67,12 +69,8 @@ public class DBConnector {
         } catch (SQLException e) {
             e.printStackTrace();
             System.out.println("Cloud 데이터베이스 연결 오류 : " + e.getMessage());
+            LogWriter.writeLog("Cloud 데이터베이스 연결 오류", e.getMessage());
             return null;
         }
     }
-
-
-
-
-
 }

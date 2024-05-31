@@ -1,0 +1,2 @@
+09시 58분 10초 : Calc_Bonus_by_Callstmt_3 에러 발생 -> / by zero
+09시 58분 26초 : Calc_Bonus_by_Callstmt_3 에러 발생 -> / by zero

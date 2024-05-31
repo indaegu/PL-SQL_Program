@@ -4,14 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47641abe-a76b-4b49-8665-44591170650b" name="변경" comment="2024.05.03 : 완성">
-      <change afterPath="$PROJECT_DIR$/.idea/git_toolbox_prj.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/activation-1.1.1.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/mail-1.4.7.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SendMail.java" afterDir="false" />
+    <list default="true" id="47641abe-a76b-4b49-8665-44591170650b" name="변경" comment="2024.05.31 : 메일 보내기 시스템 추가">
+      <change afterPath="$PROJECT_DIR$/src/LogWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calc_Bonus_2460340010_SungChangMin.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Calc_Bonus_2460340010_SungChangMin.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_2.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_3.java" afterDir="false" />
@@ -22,6 +17,7 @@
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_5.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +53,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "jdk.selected.JAVA_MODULE": "17",
     "kotlin-language-version-configured": "true",
@@ -104,7 +99,7 @@
       <updated>1717028444689</updated>
       <workItem from="1717028445762" duration="12099000" />
       <workItem from="1717044469456" duration="21269000" />
-      <workItem from="1717065899020" duration="9131000" />
+      <workItem from="1717065899020" duration="13992000" />
     </task>
     <task id="LOCAL-00001" summary="2024.05.03 : 완성">
       <option name="closed" value="true" />
@@ -114,7 +109,15 @@
       <option name="project" value="LOCAL" />
       <updated>1717061350723</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="2024.05.31 : 메일 보내기 시스템 추가">
+      <option name="closed" value="true" />
+      <created>1717114672509</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1717114672509</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -122,7 +125,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2024.05.03 : 완성" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024.05.03 : 완성" />
+    <MESSAGE value="2024.05.31 : 메일 보내기 시스템 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024.05.31 : 메일 보내기 시스템 추가" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
