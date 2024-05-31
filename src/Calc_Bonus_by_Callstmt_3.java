@@ -51,7 +51,7 @@ public class Calc_Bonus_by_Callstmt_3 {
                     "FROM\n" +
                     "  customer c\n" +
                     "WHERE\n" +
-                    "  c.enroll_dt >= TO_DATE('2018/01/01', 'YYYY/MM/DD');\n" +
+                    "  c.enroll_dt >= TO_DATE('2013/01/01', 'YYYY/MM/DD');\n" +
                     "COMMIT;\n" +
                     "END;";
 

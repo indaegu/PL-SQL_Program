@@ -41,7 +41,7 @@ public class Calc_Bonus_by_pstmt_1 {
 
             long startTime = System.currentTimeMillis(); // 시작 시간 측정
 
-            sql = "SELECT * FROM customer where enroll_dt >= to_date('2018-01-01'," +
+            sql = "SELECT * FROM customer where enroll_dt >= to_date('2013-01-01'," +
                     "'YYYY-MM-DD')"; // 320만건 데이터 가져오기
             stmt = conn.createStatement(); // 쿼리 생성
             stmt.executeQuery(sql);// 쿼리 실행

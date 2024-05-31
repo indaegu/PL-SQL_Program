@@ -31,7 +31,7 @@ public class Calc_Bonus_by_Callstmt_2 {
                     "  CURSOR cur_cust_large IS\n" +
                     "    SELECT id, pwd, address1, enroll_dt, credit_limit, gender, email\n" +
                     "    FROM customer\n" +
-                    "    WHERE enroll_dt >= TO_DATE('2018/01/01', 'YYYY/MM/DD');\n" +
+                    "    WHERE enroll_dt >= TO_DATE('2013/01/01', 'YYYY/MM/DD');\n" +
                     "    \n" +
                     "  TYPE t_record_cust IS TABLE OF cur_cust_large%ROWTYPE;\n" +
                     "  r_cur_cust t_record_cust;\n" +

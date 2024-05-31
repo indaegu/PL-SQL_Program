@@ -16,7 +16,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         // 한번 Connection을 맺어 여러 테스트에 재사용함으로서 각기 다른 Connection 시간으로 인해 생기는 오차를 방지
-        try (Connection conn = DBConnector.getConnectionKOPO_DA2()) { // try - with - resource 문으로 Connection 자동
+        try (Connection conn = DBConnector.getConnectionLocal()) { // try - with - resource 문으로 Connection 자동
             // close
             Objects.requireNonNull(conn).setAutoCommit(false); // auto commit 해제
             String mode = "";

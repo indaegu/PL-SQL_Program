@@ -22,7 +22,7 @@ public class Calc_Bonus_by_stmt_3 {
         String coupon = null; // 사용자 보너스 쿠폰을 담을 변수
         String address1 = null; // 사용자 위치를 담을 변수
         String gender = null; // 사용자 성별을 담을 변수
-        Date referenceDate = Date.valueOf("2018-01-01"); // 가상머신 : 2023-01-01, 서버 : 2018-01-01
+        Date referenceDate = Date.valueOf("2013-01-01"); // 가상머신 : 2023-01-01, 서버 : 2013-01-01
 
         try {
             System.out.println();
@@ -36,7 +36,7 @@ public class Calc_Bonus_by_stmt_3 {
 
             long startTime = System.currentTimeMillis(); // 시작 시간 측정
 
-            sql = "SELECT * FROM customer where enroll_dt >= to_date('2018-01-01'," +
+            sql = "SELECT * FROM customer where enroll_dt >= to_date('2013-01-01'," +
                     "'YYYY-MM-DD')"; // 320만건 데이터 가져오기
             stmt = conn.createStatement(); // 쿼리 생성
             stmt.executeQuery(sql);// 쿼리 실행

@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="47641abe-a76b-4b49-8665-44591170650b" name="변경" comment="2024.05.31 : 메일 보내기 시스템 추가">
-      <change afterPath="$PROJECT_DIR$/src/LogWriter.java" afterDir="false" />
+    <list default="true" id="47641abe-a76b-4b49-8665-44591170650b" name="변경" comment="2024.05.31 : KODA_2 버전 (데이터 날짜가 2013 -&gt; 2018로 변경됨)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_1.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_1.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_2.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_Callstmt_2.java" afterDir="false" />
@@ -17,7 +16,6 @@
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_3.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_4.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_5.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Calc_Bonus_by_stmt_5.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DBConnector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DBConnector.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -99,7 +97,7 @@
       <updated>1717028444689</updated>
       <workItem from="1717028445762" duration="12099000" />
       <workItem from="1717044469456" duration="21269000" />
-      <workItem from="1717065899020" duration="13992000" />
+      <workItem from="1717065899020" duration="25529000" />
     </task>
     <task id="LOCAL-00001" summary="2024.05.03 : 완성">
       <option name="closed" value="true" />
@@ -117,16 +115,36 @@
       <option name="project" value="LOCAL" />
       <updated>1717114672509</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="2024.05.31 : KODA_2 버전 (데이터 날짜가 2013 -&gt; 2018로 변경됨)">
+      <option name="closed" value="true" />
+      <created>1717121392113</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1717121392113</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="2024.05.03 : 완성" />
     <MESSAGE value="2024.05.31 : 메일 보내기 시스템 추가" />
-    <option name="LAST_COMMIT_MESSAGE" value="2024.05.31 : 메일 보내기 시스템 추가" />
+    <MESSAGE value="2024.05.31 : KODA_2 버전 (데이터 날짜가 2013 -&gt; 2018로 변경됨)" />
+    <option name="LAST_COMMIT_MESSAGE" value="2024.05.31 : KODA_2 버전 (데이터 날짜가 2013 -&gt; 2018로 변경됨)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

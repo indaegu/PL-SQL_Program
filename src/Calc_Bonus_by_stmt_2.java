@@ -23,7 +23,7 @@ public class Calc_Bonus_by_stmt_2 {
         String coupon = null; // 사용자 보너스 쿠폰을 담을 변수
         String address1 = null; // 사용자 위치를 담을 변수
         String gender = null; // 사용자 성별을 담을 변수
-        Date referenceDate = Date.valueOf("2018-01-01"); // 가상머신 : 2023-01-01, 서버 : 2018-01-01
+        Date referenceDate = Date.valueOf("2013-01-01"); // 가상머신 : 2023-01-01, 서버 : 2013-01-01
 
         try(Statement stmt2 = conn.createStatement()) { // try - with - resource 문으로 Statement 자동 close
             System.out.println();
@@ -98,7 +98,7 @@ public class Calc_Bonus_by_stmt_2 {
             // 메일 보내기
             String mailContent = "걸린 시간 : ".concat(String.valueOf(endTime - startTime) + "ms");
             SendMail.goMail(SendMail.setting(new Properties(),"hanium124@naver.com","@hanium124"),
-                    "Calc_Bonus_by_stmt_1 실행완료", mailContent);
+                    "Calc_Bonus_by_stmt_2 실행완료", mailContent);
 
         }catch (Exception e) {
             conn.rollback();
